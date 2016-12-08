@@ -1,0 +1,15 @@
+---
+pipeline: "maven/CanaryReleaseStageAndApprovePromote/Jenkinsfile"
+buildName: "springbootmongodb"
+codeReview: false
+links:
+  Git: "https://github.com/ICE-Technology/SpringBootMongoDB.git"
+  Job: "http://192.168.99.102:31102/job/springbootmongodb"
+  Production: "http://10.0.0.217:80/kubernetes/pods?namespace=default-production"
+  Staging: "http://10.0.0.217:80/kubernetes/pods?namespace=default-staging"
+  Testing: "http://10.0.0.217:80/kubernetes/pods?namespace=default-testing"
+environments:
+  Testing: "default-testing"
+  Staging: "default-staging"
+  Production: "default-production"
+useLocalFlow: true
